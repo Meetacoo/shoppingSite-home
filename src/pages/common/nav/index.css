@@ -1,0 +1,9 @@
+.user{
+	float: left;
+}
+.nav-list{
+	float: right;
+}
+.nav-list .center-list{
+	float: left;
+}
