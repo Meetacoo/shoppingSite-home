@@ -1,3 +1,4 @@
+require('pages/common/nav')
 require('./index.css')
 console.log('index');
 

@@ -1,9 +1,15 @@
-.user{
+.nav{
+	height: 30px;
+	background: #fff;
+	line-height: 30px;
+}
+.user-info{
 	float: left;
 }
 .nav-list{
 	float: right;
 }
-.nav-list .center-list{
+.nav-list .nav-item{
 	float: left;
+	margin-right: 10px;
 }

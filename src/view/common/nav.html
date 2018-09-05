@@ -1,27 +1,26 @@
 <div class="nav">
 	<div class="container">
-		<div class="user not-login">
-			<a href="./user-login.html">登录</a>
-			<a href="./user-login.html">注册</a>
+		<div class="user-info">
+			<div class="user not-login hide">
+				<a class="link" href="./user-login.html">登录</a>
+				<a class="link" href="./user-register.html">注册</a>
+			</div>
+			<div class="user login">
+				<span class="link-text">欢迎:</span>
+				<a class="link" href="jsvascript:;" id="logout">退出</a>
+			</div>
 		</div>
-		<div class="user login hide">
-			<i class="fa fa-user"></i>
-			<span>欢迎:</span>
-			<a href="">退出</a>
-		</div>
-		<div class="nav-list">
-			<div class="cart">
-				<a href="">
+		<ul class="nav-list">
+			<li class="nav-item">
+				<a class="link" href="./cart.html">
 					<i class="fa fa-shopping-cart"></i>
-					购物车<span class="cart-num">(0)</span>
+					购物车(<span class="cart-num">0</span>)
 				</a>
-			</div>
-			<div class="center-list">
-				<ul>
-					<li><a href="">个人中心</a></li>
-					<li><a href="">我的订单</a></li>
-				</ul>
-			</div>
-		</div>
+			</li>
+			<li class="nav-item">
+				<a class="link" href="./order-list">我的订单</a>
+				<a class="link" href="./user-center">个人中心</a>
+			</li>
+		</ul>
 	</div>
 </div>

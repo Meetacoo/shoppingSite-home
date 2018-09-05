@@ -38,10 +38,10 @@ module.exports = {
 	resolve: {
 		alias: {
 			node_modules: path.resolve(__dirname, './node_modules'),
-			page: path.resolve(__dirname, './src/page/'),
+			pages: path.resolve(__dirname, './src/pages/'),
 			util: path.resolve(__dirname, './src/util/'),
 			common:path.resolve(__dirname, './src/common/'),
-			service:path.resolve(__dirname, './src/service/')
+			service:path.resolve(__dirname, './src/service')
 		}
 	},
 	//配置loader
@@ -99,11 +99,11 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     port:8090,
-    historyApiFallback:true,
+    // historyApiFallback:true,
     proxy:{
     	'/user': {
     		target: 'http://localhost:8060',
-			changeOrigin: true
+			  changeOrigin: true
     	}
     }
   }

@@ -1,15 +1,11 @@
-require('./index.css');
+// require('./index.css');
 const _util = require('util/index');
 const _user = {
-	logout: function () {
-		$.ajax({
+	logout: function (success,error) {
+		_util.request({
 			url:'/user/layout',
-			success:function(result){
-				console.log(result)
-			},
-			error:function(err){
-				console.log(err)
-			}
+			success:success,
+			error:error
 		})
 	}
 }

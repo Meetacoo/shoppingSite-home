@@ -1,5 +1,6 @@
 const _util = {
 	request:function(params){
+		var _this = this;
 		$.ajax({
 			url:params.url || '',
 			method:params.method || 'get',
@@ -9,7 +10,7 @@ const _util = {
 				if (result.code === 0) {
 					params.success && params.success(result.data)
 				} else if(result.code === 10) {
-					window.location.href='./user-login.html'
+					_this.doLogin();
 				} else if(result.code === 1) {
 					params.error && params.error(result.message)
 				}
@@ -18,6 +19,11 @@ const _util = {
 				params.error && params.error(err.statusText)
 			}
 		})
+	},
+	showErrorMsg:function(msg){
+		alert(msg);
+	},doLogin:function(){
+		window.location.href='./user-login.html'
 	}
 }
 
