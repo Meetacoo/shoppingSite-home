@@ -67,18 +67,15 @@
 	text-align: center;
 }
 .form .btn-item .form-btn{
-	text-decoration: none;
-	color: orange;
-}
-.form .register-item{
-	width: 100%;
-	text-align: right;
-}  
-.form .btn-item .btns{
 	display: inline-block;
 	width: 100%;
+	text-decoration: none;
 	background: rgba(0,0,0,0);
-}
-.form .register-item .link{
 	color: orange;
 }
+.form .login-item .link{
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	color: orange;
+}  

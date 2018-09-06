@@ -5,9 +5,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const publicPath = '/';
 
 
-const getHtmlConfig = (name)=>({
+const getHtmlConfig = (name,title)=>({
 	template:'./src/view/'+name+'.html',
 	filename:name+'.html',
+  title:title,
 	inject:true,
 	hash:true,
 	chunks:['common',name]
@@ -20,7 +21,9 @@ module.exports = {
 	entry:{
 		'common':'./src/pages/common/index.js',  
 		'index':'./src/pages/index/index.js',  
-		'user-login':'./src/pages/user-login/index.js'
+    'user-login':'./src/pages/user-login/index.js',
+    'user-register':'./src/pages/user-register/index.js',
+		'result':'./src/pages/result/index.js'
 	},
 	/*
 	//如果要配置额外 jQuery ，必须在页面中引用 CDN 进行挂载
@@ -89,8 +92,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin(getHtmlConfig('index')),
-  	new HtmlWebpackPlugin(getHtmlConfig('user-login')),
+    new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
+  	new HtmlWebpackPlugin(getHtmlConfig('result','返回结果')),
   	new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
       filename: "css/[name].css",

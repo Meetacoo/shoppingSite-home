@@ -6,10 +6,20 @@
 .user-info{
 	float: left;
 }
+.username{
+	color: orange;
+	margin-right: 10px;
+}
 .nav-list{
 	float: right;
 }
 .nav-list .nav-item{
 	float: left;
 	margin-right: 10px;
+}
+.nav .link{
+	color: #888;
+}
+.nav .link:hover{
+	color: orange;
 }

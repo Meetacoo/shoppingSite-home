@@ -26,6 +26,23 @@ var login = {
 	},
 	bindEvent:function(){
 		var _this = this;
+		$('#username').on('blur',function(){
+			var username = $(this).val();
+			if (!_util.validate(username,'require')) {
+				return;
+			}
+			if (!_util.validate(username,'username')) {
+				return;
+			}
+			_user.checkUsername(username,function(result){
+				// 该用户名未被注册
+				formErr.hide();
+			},function(message){
+				// 该用户名被注册
+				formErr.show(message);
+			})
+			_this.submit();
+		})
 		$('#submit-btn').on('click',function(){
 			_this.submit();
 		})
@@ -36,17 +53,24 @@ var login = {
 		// 1: 获取数据
 		var formData = {
 			username:$.trim($('[name="username"]').val()),
-			password:$.trim($('[name="password"]').val())
+			password:$.trim($('[name="password"]').val()),
+			repassword:$.trim($('[name="repassword"]').val()),
+			phone:$.trim($('[name="phone"]').val()),
+			email:$.trim($('[name="email"]').val())
 		}
 		// console.log(formData)
+
+		
+
 		var validateResult = this.validate(formData);
 		// 2: 验证成功
 		if (validateResult.status) {
 			formErr.hide();
-			_user.login(formData,function(result){
-				_util.goHome();
+			_user.register(formData,function(result){
+				// _util.goHome();
+				window.location.href = './result.html?type=register';
 			},function(msg){
-				formErr.show(validateResult.msg);
+				formErr.show(msg);
 			})
 		} 
 		// 3: 验证失败
@@ -77,6 +101,36 @@ var login = {
 		// 验证密码格式
 		if (!_util.validate(formData.password,'password')) {
 			result.msg = '密码格式错误';
+			return result;
+		}
+		// 验证重复密码不能为空
+		if (!_util.validate(formData.repassword,'require')) {
+			result.msg = '密码不一致';
+			return result;
+		}
+		// 验证重复密码格式
+		if (formData.repassword != formData.password) {
+			result.msg = '密码不一致';
+			return result;
+		}
+		// 验证手机号码不能为空
+		if (!_util.validate(formData.phone,'require')) {
+			result.msg = '手机号码不能为空';
+			return result;
+		}
+		// 验证手机号码格式
+		if (!_util.validate(formData.phone,'phone')) {
+			result.msg = '手机号码格式错误';
+			return result;
+		}
+		// 验证邮箱不能为空
+		if (!_util.validate(formData.email,'require')) {
+			result.msg = '邮箱不能为空';
+			return result;
+		}
+		// 验证邮箱格式
+		if (!_util.validate(formData.email,'email')) {
+			result.msg = '邮箱格式错误';
 			return result;
 		}
 

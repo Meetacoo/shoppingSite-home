@@ -1,0 +1,23 @@
+.result{
+	min-height: 300px;
+	padding-top: 100px;
+	overflow: hidden;
+	background: #ddd;
+}
+.result .result-box{
+	text-align: center;
+	/*height: 30px;*/
+	width: 300px;
+	margin: 0px auto;
+	display: none;
+}
+.result .result-box .title{
+	font-size: 30px;
+	margin-bottom: 30px;
+	color: #fff;
+}
+.result .link{
+	margin-right: 10px;
+	/*float: left;*/
+	display: inline-block;
+}
