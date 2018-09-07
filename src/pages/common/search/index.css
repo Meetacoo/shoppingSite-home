@@ -1,0 +1,42 @@
+.search{
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding: 20px;
+	border-bottom: 2px solid orange;
+}
+.logo a{
+	color: orange;
+}
+.logo-item{
+	width: 150px;
+	font-size: 30px;
+	color: orange;
+	cursor: pointer;
+	float: left;
+}
+.logo-item .link{
+	color: orange;
+}
+.search-item{
+	font-size: 30px;
+	color: orange;
+	cursor: pointer;
+	float: left;
+}
+.search-input{
+	height: 40px;
+	width: 400px;
+	outline: none;
+	border: 2px solid orange;
+	float: left;
+	padding: 8px;
+	font-size: 14px;
+	box-sizing: border-box;
+	margin-left: 100px;
+}
+.search-btn{
+	height: 40px;
+	float: left;
+	line-height: 40px;
+}

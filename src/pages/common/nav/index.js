@@ -4,7 +4,7 @@ var _util = require('util')
 var nav = {
 	init: function(){
 		this.bindEvent();
-		this.loadUserInfo();
+		this.loadUsername();
 		this.loadCartInfo();
 		return this;
 	},
@@ -17,9 +17,10 @@ var nav = {
 				_util.showErrorMsg(message)
 			});
 		})
+
 	},
-	loadUserInfo:function(){
-		_user.getUserInfo(function(userInfo){
+	loadUsername:function(){
+		_user.getUsername(function(userInfo){
 			// console.log(userInfo);
 			$('.not-login').hide();
 			$('.login')

@@ -1,6 +1,7 @@
-require('./index.css');
+
 require('pages/common/logo')
 require('pages/common/footer')
+require('./index.css');
 
 var _util = require('util');
 var _user = require('service/user');
@@ -46,7 +47,11 @@ var login = {
 		$('#submit-btn').on('click',function(){
 			_this.submit();
 		})
-		
+		$('input').on('keyup',function(e){
+			if (e.keyCode == 13) {
+				_this.submit();
+			}
+		})
 	},
 	submit:function(){
 		// alert('sfa');

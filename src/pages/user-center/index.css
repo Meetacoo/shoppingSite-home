@@ -1,0 +1,13 @@
+.user-page-center{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.side-content{
+	width: 1060px;
+	background: #fff;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+	height: 500px;
+}

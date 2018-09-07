@@ -1,5 +1,7 @@
-require('pages/common/logo')
-require('pages/common/footer')
+require('pages/common/nav');
+require('pages/common/search');
+require('pages/common/footer');
+var _side = require('pages/common/side');
 require('./index.css');
 
 var _util = require('util');
@@ -19,8 +21,9 @@ var formErr = {
 		.text(msg)
 	}
 }
-var login = {
+var page = {
 	init: function(){
+		this.onLoad();
 		this.bindEvent();
 		return this;
 	},
@@ -35,23 +38,28 @@ var login = {
 			}
 		})
 	},
+	onLoad:function(){
+		_side.render('user-update-password');
+	},
 	submit:function(){
 		// alert('sfa');
 		// 1: 获取数据
 		var formData = {
-			username:$.trim($('[name="username"]').val()),
-			password:$.trim($('[name="password"]').val())
+			password:$.trim($('[name="password"]').val()),
+			repassword:$.trim($('[name="repassword"]').val())
 		}
 		// console.log(formData)
+
+		
+
 		var validateResult = this.validate(formData);
 		// 2: 验证成功
 		if (validateResult.status) {
 			formErr.hide();
-			_user.login(formData,function(result){
-				_util.goHome();
-				window.location.href=_util.getParamFromUrl('redirect');
+			_user.updatePassword(formData,function(result){
+				window.location.href = './result.html?type=updatePassword';
 			},function(msg){
-				formErr.show(validateResult.msg);
+				formErr.show(msg);
 			})
 		} 
 		// 3: 验证失败
@@ -64,16 +72,6 @@ var login = {
 			status:false,
 			msg:''
 		}
-		// 验证用户名不能为空
-		if (!_util.validate(formData.username,'require')) {
-			result.msg = '用户名不能为空';
-			return result;
-		}
-		// 验证用户名格式
-		if (!_util.validate(formData.username,'username')) {
-			result.msg = '用户名格式错误';
-			return result;
-		}
 		// 验证密码不能为空
 		if (!_util.validate(formData.password,'require')) {
 			result.msg = '密码不能为空';
@@ -84,10 +82,14 @@ var login = {
 			result.msg = '密码格式错误';
 			return result;
 		}
-
+		// 验证重复密码格式
+		if (formData.repassword != formData.password) {
+			result.msg = '密码不一致';
+			return result;
+		}
 		result.status = true;
 		return result;
 	}
 }
 
-module.exports = login.init();
+module.exports = page.init();

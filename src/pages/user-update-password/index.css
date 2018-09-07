@@ -1,16 +1,21 @@
+.user-page-center{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.side-content{
+	width: 1060px;
+	background: #fff;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+	height: 500px;
+}
 .form{
 	height: 500px;
 	overflow: hidden;
-	background: #ddd;
 }
 .form .form-all{
 	width: 300px;
-	margin: 100px auto;
-	border: 1px solid #ccc;
-	background: #fff;
-	padding: 30px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 }
 .form .title-item{
 	text-align: center;

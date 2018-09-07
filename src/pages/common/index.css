@@ -4,6 +4,14 @@ body{
 	font-size: 12px;
 	background: #ccc;
 }
+.clearfix:after{
+	content: '';
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+}
+
 .link{
 	text-decoration: none;
 	color: #fff;
@@ -27,4 +35,5 @@ body{
 	line-height: 30px;
 	font-size: 16px;
 	background-color: orange;
+	transition: 0.5s all;
 }

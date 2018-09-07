@@ -1,0 +1,26 @@
+.side{
+	width: 200px;
+	background: #fff;
+	float: left;
+	margin-right: 20px;
+	padding: 20px 0 0 20px;
+	box-sizing: border-box;
+	height: 500px;
+}
+.side .side-item{
+	height: 20px;
+	margin-bottom: 10px;
+}
+.side .side-item.active{
+	border-right: 2px solid orange;
+}
+.side .side-item.active a{
+	color: orange;
+}
+.side .link{
+	font-size: 14px;
+	color: #555;
+}
+.side .link:hover{
+	color: orange;
+}

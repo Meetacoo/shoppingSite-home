@@ -1,4 +1,3 @@
-// require('./index.css');
 const _util = require('util/index');
 const _user = {
 	logout: function (success,error) {
@@ -26,6 +25,13 @@ const _user = {
 			error:error
 		})
 	},
+	getUsername: function (success,error) {
+		_util.request({
+			url:'/user/username',
+			success:success,
+			error:error
+		})
+	},
 	getUserInfo: function (success,error) {
 		_util.request({
 			url:'/user/userInfo',
@@ -39,6 +45,15 @@ const _user = {
 			data:{
 				username:username
 			},
+			success:success,
+			error:error
+		})
+	},
+	updatePassword:function(data,success,error){
+		_util.request({
+			method:'put',
+			url:'/user/updatePassword',
+			data:data,
 			success:success,
 			error:error
 		})
