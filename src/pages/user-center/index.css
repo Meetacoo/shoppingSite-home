@@ -4,10 +4,26 @@
 }
 
 .side-content{
-	width: 1060px;
+	width: 860px;
 	background: #fff;
 	float: left;
 	padding: 20px;
 	box-sizing: border-box;
 	height: 500px;
+}
+.form-item{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+.form-item .user-item{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+.form-item .username{
+	color: #000;
+}
+.user-content{
+	margin-left: 10px;
 }

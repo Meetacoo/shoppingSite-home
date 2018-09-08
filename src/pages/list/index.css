@@ -1,0 +1,39 @@
+.sort{
+
+}
+.sort-item{
+	float: left;
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #000;
+	line-height: 30px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.sort-item.active{
+	background: orange;
+	color: #fff;
+}
+.default{
+	margin-right: -1px;
+}
+.price{
+	position: relative;
+}
+.fa-sort-asc,
+.fa-sort-desc{
+	position: absolute;
+	margin-top: 8px;
+	margin-left: 5px;
+}
+.sort-item.price.active .fa-sort-desc{
+	color: #aaa;
+}
+.fa-sort-asc~.fa-sort-desc{
+	color: #aaa;
+}
+.fa-sort-desc~.fa-sort-asc{
+	color: #aaa;
+}

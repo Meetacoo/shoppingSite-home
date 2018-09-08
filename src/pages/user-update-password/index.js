@@ -18,7 +18,7 @@ var formErr = {
 		$('.error-item')
 		.hide()
 		.find('.error-msg')
-		.text(msg)
+		.text('')
 	}
 }
 var page = {
@@ -49,8 +49,6 @@ var page = {
 			repassword:$.trim($('[name="repassword"]').val())
 		}
 		// console.log(formData)
-
-		
 
 		var validateResult = this.validate(formData);
 		// 2: 验证成功
