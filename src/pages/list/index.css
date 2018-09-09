@@ -22,18 +22,16 @@
 .price{
 	position: relative;
 }
-.fa-sort-asc,
-.fa-sort-desc{
+.fa-sort-asc{
 	position: absolute;
 	margin-top: 8px;
-	margin-left: 5px;
 }
-.sort-item.price.active .fa-sort-desc{
+/* .sort-item.price.active .fa-sort-desc{
+	color: #aaa;
+} */
+.sort-item.asc .fa-sort-desc{
 	color: #aaa;
 }
-.fa-sort-asc~.fa-sort-desc{
-	color: #aaa;
-}
-.fa-sort-desc~.fa-sort-asc{
+.sort-item.desc .fa-sort-asc{
 	color: #aaa;
 }
