@@ -73,7 +73,8 @@ var page = {
 		this.listParams.categoryId
 		? (delete this.listParams.keyword)
 		: (delete this.listParams.categoryId)
-		console.log(this.listParams)
+		// console.log(this.listParams)
+		// $('.product-list-box').html('<p>loading...</p>');
 		_product.getProductList(this.listParams,function(result){
 			// console.log(result)
 			var list = result.list.map(function(product){

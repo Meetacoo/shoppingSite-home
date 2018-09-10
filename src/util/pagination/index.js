@@ -30,8 +30,8 @@ var tpl = require('./index.tpl');
 			var end = options.current + options.range < pages ? options.current + options.range : pages;
 			var prev = options.current - 1;
 			var next = options.current + 1;
-			var hasPrev = prev - 1 > 0 ? true : false;
-			var hasNext = next + 1 < 0 ? true : false;
+			var hasPrev = prev > 0 ? true : false;
+			var hasNext = next <= pages ? true : false;
 			var pageArray = [];
 			pageArray.push({
 				name:'上一页',
@@ -52,7 +52,9 @@ var tpl = require('./index.tpl');
 			})
 			console.log(pageArray)
 			var html = _util.render(tpl,{
-				pageArray:pageArray
+				pageArray:pageArray,
+				current:options.current,
+				pages:pages
 			});
 			this.$elem.html(html);
 		}
