@@ -30,15 +30,16 @@ var page = {
 	},
 	submit:function(){
 		var keyword = $.trim($('#search-input').val());
-		// 2: 验证成功
+		window.location.href = './list.html?keyword='+keyword;
+		/*// 2: 验证成功
 		if (keyword) {
-			window.location.href = './list.html?keyword='+keyword;
 			// console.log(keyword)
+			window.location.href = './list.html?keyword='+keyword;
 		} 
 		// 3: 验证失败
 		else {
 			_util.goHome();
-		}
+		}*/
 	}
 }
 

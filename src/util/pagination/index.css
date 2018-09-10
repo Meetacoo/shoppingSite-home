@@ -1,0 +1,22 @@
+.pagination-box{
+	text-align: center;
+}
+.pagination-list{
+	text-align: center;
+}
+.pagination-item{
+	float: left;
+	width: 25px;
+	height: 25px;
+	border: 1px solid skyblue;
+	text-align: center;
+	line-height: 25px;
+	margin-right: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	user-select: none;
+}
+.disabled{
+	cursor: auto;
+	border: 1px solid #000;
+}

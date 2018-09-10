@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%= require('html-loader!./common/header.html') %>
+	<title>
+		<%= htmlWebpackPlugin.options.title %> -Ssite电商平台
+	</title>
+</head>
+<body>
+	<%= require('html-loader!./common/nav.html') %>
+	<%= require('html-loader!./common/search.html') %>
+	<div class="detail">
+		<div class="container clearfix">
+			<div class="detail-box">
+				<div class="product-intro">
+					<div class="product-img">
+						<div class="product-main-img"></div>
+						<ul class="product-small-img-list clearfix">
+							<li class="product-small-img-item">
+								<img src="http://localhost:8060/productImage/1535766400927.jpg" alt="">
+							</li>
+							<li class="product-small-img-item">
+								<img src="http://localhost:8060/productImage/1535766400927.jpg" alt="">
+							</li>
+							<li class="product-small-img-item">
+								<img src="http://localhost:8060/productImage/1535766400927.jpg" alt="">
+							</li>
+							<li class="product-small-img-item">
+								<img src="http://localhost:8060/productImage/1535766400927.jpg" alt="">
+							</li>
+							<li class="product-small-img-item">
+								<img src="http://localhost:8060/productImage/1535766400927.jpg" alt="">
+							</li>
+						</ul>
+						<div class="product-detail"></div>
+					</div>
+					<div class="product-info"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%= require('html-loader!./common/footer.html') %>
+</body>
+</html>
