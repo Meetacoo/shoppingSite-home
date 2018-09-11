@@ -24,7 +24,7 @@
 		</div>
 		<div class="product-info-item product-count">
 			<span class="label">购买数量：</span>
-			<input type="text" value="1" class="count-input">
+			<input type="text" value="1" class="count-input" readonly>
 			<span class="btn-count plus">+</span>
 			<span class="btn-count minus">-</span>
 		</div>

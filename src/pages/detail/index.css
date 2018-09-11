@@ -27,9 +27,13 @@
 	height: 76px;
 	margin-right: 10px;
 	float: left;
+	cursor: pointer;
 }
 .product-small-img-item:last-child{
 	margin-right: 0;
+}
+.product-small-img-item.active{
+	border: 1px solid orange;
 }
 .product-info{
 	width: 630px;
@@ -79,7 +83,7 @@
 	font-size: 18px;
 	margin-left: 5px;
 	cursor: pointer;
-	user-select: auto;
+	user-select: none;
 }
 .product-info .plus{
 	top: 2px;
