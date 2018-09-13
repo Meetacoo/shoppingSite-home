@@ -23,8 +23,10 @@ module.exports = {
     'index':'./src/pages/index/index.js',  
     'list':'./src/pages/list/index.js',  
     'detail':'./src/pages/detail/index.js',  
+    'cart':'./src/pages/cart/index.js',  
 		'cart':'./src/pages/cart/index.js',  
-    'user-login':'./src/pages/user-login/index.js',
+    'order-confirm':'./src/pages/order-confirm/index.js',
+    'user-login':'./src/pages/user-login/index.js',    
     'user-register':'./src/pages/user-register/index.js',
     'user-center':'./src/pages/user-center/index.js',
     'user-update-password':'./src/pages/user-update-password/index.js',
@@ -108,6 +110,7 @@ module.exports = {
     new HtmlWebpackPlugin(getHtmlConfig('list','商品列表')),
     new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情')),
     new HtmlWebpackPlugin(getHtmlConfig('cart','购物车')),
+    new HtmlWebpackPlugin(getHtmlConfig('order-confirm','确认支付')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
     new HtmlWebpackPlugin(getHtmlConfig('user-center','用户中心')),
@@ -131,10 +134,18 @@ module.exports = {
         target: 'http://localhost:8060',
         changeOrigin: true
       },
-    	'/cart': {
+      '/cart': {
+        target: 'http://localhost:8060',
+        changeOrigin: true
+      },
+      '/shipping': {
+        target: 'http://localhost:8060',
+        changeOrigin: true
+      },
+    	'/order': {
     		target: 'http://localhost:8060',
 			  changeOrigin: true
-    	},
+    	}
     }
   }
 };

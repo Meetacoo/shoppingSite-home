@@ -1,5 +1,5 @@
-require('pages/common/logo')
-require('pages/common/footer')
+require('pages/common/logo');
+require('pages/common/footer');
 require('./index.css');
 
 var _util = require('util');
@@ -90,4 +90,6 @@ var login = {
 	}
 }
 
-module.exports = login.init();
+$(function(){
+	login.init();
+})

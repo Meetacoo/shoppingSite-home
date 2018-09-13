@@ -17,6 +17,14 @@ var _cart = {
 			error:error
 		})
 	},
+	getCartCount: function (success,error) {
+		_util.request({
+			url:'/cart/count',
+			success:success,
+			error:error
+		})
+	},
+
 	selectOne: function (data,success,error) {
 		_util.request({
 			method:'put',
@@ -30,6 +38,48 @@ var _cart = {
 		_util.request({
 			method:'put',
 			url:'/cart/unselectOne',
+			data:data,
+			success:success,
+			error:error
+		})
+	},
+	selectAll: function (success,error) {
+		_util.request({
+			method:'put',
+			url:'/cart/selectAll',
+			success:success,
+			error:error
+		})
+	},
+	unselectAll: function (success,error) {
+		_util.request({
+			method:'put',
+			url:'/cart/unselectAll',
+			success:success,
+			error:error
+		})
+	},
+	delectOne: function (data,success,error) {
+		_util.request({
+			method:'put',
+			url:'/cart/delectOne',
+			data:data,
+			success:success,
+			error:error
+		})
+	},
+	delectSelected: function (success,error) {
+		_util.request({
+			method:'put',
+			url:'/cart/delectSelected',
+			success:success,
+			error:error
+		})
+	},
+	updateCount: function (data,success,error) {
+		_util.request({
+			method:'put',
+			url:'/cart/updateCount',
 			data:data,
 			success:success,
 			error:error

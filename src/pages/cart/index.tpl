@@ -1,5 +1,5 @@
 {{#notEmpty}}
-<ul class="cart-title clearfix">
+<ul class="product-title clearfix">
 	<li class="product-select">
 		{{#allChecked}}
 		<input type="checkbox" class="select-all" checked />
@@ -16,7 +16,7 @@
 	<li class="product-opreation">操作</li>
 </ul>
 {{#cartList}}
-<ul class="cart-item clearfix" data-product-id="{{productInfo._id}}">
+<ul class="product-item clearfix" data-product-id="{{productInfo._id}}">
 	<li class="product-select">
 		{{#checked}}
 		<input type="checkbox" class="select-one" checked />
@@ -26,16 +26,16 @@
 		{{/checked}}	
 	</li>
 	<li class="product-info">
-		<a href="./detai.html?productId={{productInfo._id}}" class="link">
+		<a href="./detail.html?productId={{productInfo._id}}" target="_blank" class="link">
 			<img src="{{productInfo.image}}" alt=""> 
 			<span>{{productInfo.name}}</span>
 		</a>
 	</li>
 	<li class="product-price">
-		{{productInfo.price}}
+		￥ {{productInfo.price}}
 	</li>
 	<li class="product-count">
-		<span class="count-btn minus">-</span><input type="text" class="count-input" value="{{count}}" readonly><span class="count-btn plus">+</span>
+		<span class="count-btn minus">-</span><input type="text" class="count-input" data-stock="{{productInfo.stock}}" value="{{count}}" readonly><span class="count-btn plus">+</span>
 	</li>
 	<li class="product-totalPrice">￥ {{totalPrice}}</li>
 	<li class="product-opreation">
@@ -46,7 +46,7 @@
 	</li>
 </ul>
 {{/cartList}}
-<ul class="cart-footer clearfix">
+<ul class="product-footer clearfix">
 	<li class="product-select">
 		<!-- <input type="checkbox" class="select-all"> -->
 		{{#allChecked}}
@@ -71,7 +71,7 @@
 </ul>
 {{/notEmpty}}
 {{^notEmpty}}
-<p class="empty-message">购物车空空如也!!!
-<a href="/" class="btn gohome-btn">立即去购物</a></p>
+<p class="empty-message">购物车空空如也!!!</p>
+<a href="/" class="btn gohome-btn">立即去购物</a>
 
 {{/notEmpty}}
