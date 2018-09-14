@@ -1,24 +1,27 @@
 <div class="panel">
 	<h2 class="panel-header">送货地址</h2>
 	<div class="panel-body clearfix">
-		<div class="shopping-item active">
-			<h3 class="shopping-title">上海 浦东 新区</h3>
-			<p class="shopping-detail">12548521584</p>
-			<div class="shopping-footer">
-				<a href="" class="link shopping-edit">编辑</a>
-				<a href="" class="link shopping-delete">删除</a>
+		{{#shippings}}
+		{{#isActive}}
+		<div class="shipping-item active" data-shipping-id="{{_id}}">
+		{{/isActive}}
+		{{^isActive}}
+		<div class="shipping-item" data-shipping-id="{{_id}}">
+		{{/isActive}}
+			<h3 class="shipping-title">
+				{{province}} {{city}} ({{name}})
+			</h3>
+			<p class="shipping-detail">
+				{{province}} {{city}} {{address}} {{phone}}
+			</p>
+			<div class="shipping-footer">
+				<span class="link shipping-delete">删除</span>
+				<span class="link shipping-edit">编辑</span>
 			</div>
 		</div>
-		<div class="shopping-item">
-			<h3 class="shopping-title">上海 浦东 新区</h3>
-			<p class="shopping-detail">12548521584</p>
-			<div class="shopping-footer">
-				<a href="" class="link shopping-edit">编辑</a>
-				<a href="" class="link shopping-delete">删除</a>
-			</div>
-		</div>
-		<div class="shopping-add">
-			<p>+</p>
+		{{/shippings}}
+		<div class="shipping-add">
+			<i class="fa fa-plus"></i><br>
 			添加新地址
 		</div>
 	</div>

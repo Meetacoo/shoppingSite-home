@@ -24,6 +24,9 @@ const _util = {
 	showErrorMsg:function(msg){
 		alert(msg);
 	},
+	showSuccessMsg:function(msg){
+		alert(msg);
+	},
 	goHome:function(){
 		window.location.href='/';
 	},
@@ -68,6 +71,14 @@ const _util = {
 		// 邮箱格式验证
 		if (type === 'email') {
 			return /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(value);
+		}
+		// 邮编格式验证
+		if (type === 'zip') {
+			return /^[0-9]{6}$/.test(value);
+		}
+		// 用户名格式验证
+		if (type === 'name') {
+			return /^[a-zA-Z0-9\u4E00-\u9FA5]{2,10}$/.test(value);
 		}
 
 	},
