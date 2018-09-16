@@ -21,7 +21,7 @@ var tpl = require('./index.tpl');
 			})
 		},
 		render:function(options){
-			console.log(options);
+			// console.log(options);
 			var pages = Math.ceil(options.total / options.pageSize);
 			if (pages <= 1) {
 				return;
@@ -50,7 +50,7 @@ var tpl = require('./index.tpl');
 				value:next,
 				disabled:!hasNext
 			})
-			console.log(pageArray)
+			// console.log(pageArray)
 			var html = _util.render(tpl,{
 				pageArray:pageArray,
 				current:options.current,

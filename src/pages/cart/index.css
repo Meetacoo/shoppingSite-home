@@ -57,3 +57,10 @@
 	cursor: pointer;
 	user-select: none;
 }
+.cart-box .empty-message{
+	margin-bottom: 20px;
+}
+.cart-box .gohome-btn{
+	display: block;
+	margin: 0 auto;
+}

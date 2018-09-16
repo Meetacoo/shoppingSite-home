@@ -1,6 +1,6 @@
 {{#list}}
 	{{#isActive}}
-		<li class="side-item active">
+		<li class="side-item activea">
 	{{/isActive}}
 	{{^isActive}}
 		<li class="side-item">

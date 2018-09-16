@@ -72,6 +72,6 @@
 {{/notEmpty}}
 {{^notEmpty}}
 <p class="empty-message">购物车空空如也!!!</p>
-<a href="/" class="btn gohome-btn">立即去购物</a>
+<a href="/" class="btns link gohome-btn">立即去购物</a>
 
 {{/notEmpty}}

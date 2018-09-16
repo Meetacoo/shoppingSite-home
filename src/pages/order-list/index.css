@@ -1,0 +1,80 @@
+.user-page-list{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.side-content{
+	width: 860px;
+	background: #fff;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+	min-height: 500px;
+}
+
+.product-item {
+	height: 80px;
+	line-height: 80px;
+	margin-bottom: 15px;
+	border: 1px solid #ddd;
+}
+/*商品列表*/
+.product-select{
+	width: 6%;
+}
+.product-info{
+	width: 70%;
+}
+.product-price{
+	width: 10%;
+}
+.product-count{
+	width: 10%;
+}
+.product-totalPrice{
+	width: 10%;
+}
+.gocart-btn{
+	margin: 0 auto;
+}
+
+.order-title{
+	padding: 10px;
+	border: 1px solid #ddd;
+	margin-bottom: -1px;
+	box-sizing: border-box;
+	background: #f4f4f4;
+	margin-top: 10px;
+}
+.order-title li{
+	float: left;
+	margin-right: 10px;
+}
+.order-detail .link{
+	color: #666;
+}
+.order-detail .link:hover{
+	color: orange;
+}
+.order-payment .text{
+	color: orange;
+	font-size: 14px;
+}
+.order-shipping-name{
+	width: 115px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+.order-no{
+	width: 165px;
+}
+.order-title li.order-detail{
+	float: right;
+}
+.product-item{
+	margin-bottom: -1px;
+}
+.pagination-box{
+	margin-top: 30px;
+}

@@ -11,10 +11,10 @@
 	height: 20px;
 	margin-bottom: 10px;
 }
-.side .side-item.active{
+.side .side-item.activea{
 	border-right: 2px solid orange;
 }
-.side .side-item.active a{
+.side .side-item.activea a{
 	color: orange;
 }
 .side .link{
