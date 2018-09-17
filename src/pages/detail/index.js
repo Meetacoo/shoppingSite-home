@@ -63,14 +63,17 @@ var page = {
 	},
 	loadProductDetail:function(){
 		var _this = this;
+		$('.detail-box').html('<div class="loading"></div>')
+		
 		_product.getProductDetail({productId:this.params.productId},function(product){
 			if (product) {
 				// console.log('product:::',product)
-				if (product.images) {
+				/*if (product.images) {
 					product.images = product.images.split(',');
 				} else {
 					product.images = [require('images/product-default.jpg')]
-				}
+				}*/
+				product.images = product.images.split(',');
 				product.mainImg = product.images[0];
 				_this.stock = product.stock;
 

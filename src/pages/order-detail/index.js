@@ -36,6 +36,7 @@ var page = {
 	},
 	loadOrder:function(){
 		var _this = this;
+		$('.side-content').html('<div class="loading"></div>');
 		_order.getOrder(_this.params,function(order){
 			_this.renderOrderDetail(order)
 		},function(msg){
@@ -46,11 +47,12 @@ var page = {
 		if (order) {
 			order.productList.forEach(product=>{
 				// console.log(product)
-				if (product.images) {
+				/*if (product.images) {
 					product.image = product.images.split(',')[0];
 				} else {
 					product.image = require('images/product-default.jpg');
-				}
+				}*/
+				product.image = product.images.split(',')[0];
 			})
 			order.createdTime = new Date(order.createdAt).toLocaleString();
 		}

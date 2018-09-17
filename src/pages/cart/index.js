@@ -137,6 +137,7 @@ var page = {
 	},
 	loadCart:function(){
 		var _this = this;
+		$('.cart-box').html('<div class="loading"></div>')
 		_cart.getCart(function(cart){
 			_this.renderCart(cart)
 		},function(msg){
@@ -150,11 +151,12 @@ var page = {
 		// 购物车数据适配
 		cart.cartList.forEach(item=>{
 			// console.log(item.productInfo.stock)
-			if (item.productInfo.images) {
+			/*if (item.productInfo.images) {
 				item.productInfo.image = item.productInfo.images.split(',')[0];
 			} else {
 				item.productInfo.image = require('images/product-default.jpg');
-			}
+			}*/
+			item.productInfo.image = item.productInfo.images.split(',')[0];
 		})
 		cart.notEmpty = !!cart.cartList.length;
 		var html = _util.render(tpl,cart)

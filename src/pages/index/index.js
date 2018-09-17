@@ -78,6 +78,7 @@ var page = {
 		$('.keywords').html(html);
 	},
 	loadCarousels:function(){
+
 		var html = _util.render(carouselTpl,{
 			carousel:this.carousel
 		});
@@ -94,6 +95,7 @@ var page = {
 		// $('.carousel').unslider();
 	},
 	loadFloors:function(){
+		$('.floor-wrap').html('<div class="loading"></div>')
 		var html = _util.render(floorTpl,{
 			floor:this.floor
 		});

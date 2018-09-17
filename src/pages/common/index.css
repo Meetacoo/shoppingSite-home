@@ -46,6 +46,24 @@ a{
 	user-select: none;
 }
 
+.crumb {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+.crumb .link{
+	color: #666;
+}
+.crumb .link:hover{
+	color: orange;
+}
+.loading{
+	margin: 0 auto;
+	width: 820px;
+	height: 400px;
+	text-align: center;
+	background: url('../../images/loading.gif') no-repeat;
+}
+
 .empty-message{
 	font-size: 28px;
 	text-align: center;

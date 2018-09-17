@@ -21,6 +21,7 @@ var page = {
 	},
 	loadPaymentDetail:function(){
 		var _this = this;
+		$('.payment-box').html('<div class="loading"></div>')
 		_payment.getPaymentInfo({orderNo:this.params.orderNo},function(payment){
 			var html = _util.render(tpl,payment);
 			$('.payment-box').html(html);

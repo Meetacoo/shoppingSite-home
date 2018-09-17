@@ -75,17 +75,19 @@ var page = {
 		: (delete this.listParams.categoryId)
 		// console.log(this.listParams)
 		// $('.product-list-box').html('<p>loading...</p>');
+		$('.product-list-box').html('<div class="loading"></div>')
 		_product.getProductList(this.listParams,function(result){
-			// console.log(result)
+			console.log("result:::",result)
 			var list = result.list.map(function(product){
-				// console.log(product.images)
-				if (product.images) {
+				console.log(product.images)
+				/*if (product.images) {
 					// console.log(product.images)
 					// console.log(product.images.split(','));
 					product.image = product.images.split(',')[0];
 				} else {
 					product.image = require('images/product-default.jpg');
-				}
+				}*/
+				product.image = product.images.split(',')[0];
 				return product;
 			});
 			var html = _util.render(tpl,{

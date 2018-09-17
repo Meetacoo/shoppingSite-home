@@ -1,10 +1,4 @@
 {{#notEmpty}}
-<ul class="product-title clearfix">
-	<li class="product-info">商品信息</li>
-	<li class="product-price">单价</li>
-	<li class="product-count">数量</li>
-	<li class="product-totalPrice">小计</li>
-</ul>
 {{#order}}
 	<ul class="order-title clearfix">
 		<li class="order-no">
@@ -47,6 +41,12 @@
 		</li>
 	</ul>
 {{/order}}
+<ul class="product-title clearfix">
+	<li class="product-info">商品信息</li>
+	<li class="product-price">单价</li>
+	<li class="product-count">数量</li>
+	<li class="product-totalPrice">小计</li>
+</ul>
 {{#order.productList}}
 	<ul class="product-item clearfix">
 		<li class="product-info">

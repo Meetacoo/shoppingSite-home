@@ -132,6 +132,7 @@ var page = {
 		this.$shippingBox.html(html);
 	},
 	loadProductList:function(){
+		$('.product-box').html('<div class="loading"></div>')
 		_order.getOrderProductList(function(result){
 			// 购物车数据适配
 			result.cartList.forEach(item=>{

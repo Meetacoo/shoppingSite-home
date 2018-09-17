@@ -31,15 +31,16 @@ var page = {
 		_side.render('order-list');
 	},
 	loadOrderList:function(){
-
 		_order.getOrderList({page:this.params.page},function(orders){
+			$('.order-box').html('<div class="loading"></div>')
 			let list = orders.list.map(order=>{
 				order.productList.forEach(product=>{
-					if (product.images) {
+					/*if (product.images) {
 						product.image = product.images.split(',')[0];
 					} else {
 						product.image = require('images/product-default.jpg');
-					}
+					}*/
+					product.image = product.images.split(',')[0];
 				})
 				order.createdTime = new Date(order.createdAt).toLocaleString();
 				return order;
