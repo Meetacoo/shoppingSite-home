@@ -12,8 +12,8 @@
 		</ul>
 	</div>
 	<div class="product-info clearfix">
-		<h2 class="product-name">iPhone手机</h2>
-		<p class="product-description">{{desprition}}</p>
+		<h2 class="product-name text">{{name}}</h2>
+		<p class="product-description">{{description}}</p>
 		<div class="product-info-item product-price">
 			<span class="label">价格：</span>
 			<span class="info">￥ {{price}}</span>

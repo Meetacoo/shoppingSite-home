@@ -18,16 +18,16 @@ var floorTpl = require('./floor.tpl');
 var page = {
 	// :[{:[{:},{:}]},]
 	keywords:[
-		{item:[{name:'手机'},{name:'IPhone'}]},
-		{item:[{name:'女装'},{name:'漂亮'}]},
-		{item:[{name:'手机'},{name:'IPhone'}]},
-		{item:[{name:'手机'},{name:'IPhone'}]},
-		{item:[{name:'手机'},{name:'IPhone'}]},
-		{item:[{name:'手机'},{name:'IPhone'}]},
-		{item:[{name:'女装'},{name:'漂亮'}]},
-		{item:[{name:'手机'},{name:'IPhone'}]},
-		{item:[{name:'手机'},{name:'IPhone'}]},
-		{item:[{name:'手机'},{name:'IPhone'}]}
+		{item:[{name:'手机'},{name:'phone'}]},
+		{item:[{name:'电子书刊'},{name:'电子书 网络原创'}]},
+		{item:[{name:'音像'},{name:'音乐 影视'}]},
+		{item:[{name:'少儿'},{name:'商务 投资'}]},
+		{item:[{name:'文艺'},{name:'小说 文学'}]},
+		{item:[{name:'人文社科'},{name:'历史 哲学'}]},
+		{item:[{name:'经管'},{name:'励志经济 金融与投资'}]},
+		{item:[{name:'生活'},{name:'生活 健身与保健'}]},
+		{item:[{name:'科技'},{name:'工业技术 科普读物'}]},
+		{item:[{name:'教育'},{name:'中小学教辅 教育与考试'}]}
 	],
 	carousel:[
 		{categoryId:'5b89f0e379c3e82228c60d63',image:require('images/carousel/carousel1.jpg')},

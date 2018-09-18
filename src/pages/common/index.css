@@ -45,6 +45,11 @@ a{
 	cursor: pointer;
 	user-select: none;
 }
+.text{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
 
 .crumb {
 	margin-bottom: 20px;

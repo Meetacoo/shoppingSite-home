@@ -25,7 +25,7 @@
 		<input type="checkbox" class="select-one" />
 		{{/checked}}	
 	</li>
-	<li class="product-info">
+	<li class="product-info text">
 		<a href="./detail.html?productId={{productInfo._id}}" target="_blank" class="link">
 			<img src="{{productInfo.image}}" alt=""> 
 			<span>{{productInfo.name}}</span>
